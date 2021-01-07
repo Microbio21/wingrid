@@ -1,0 +1,354 @@
+.container {
+  width: 100%;
+  height: 100%;
+
+  margin: auto;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "side main main main main"
+    "side main main main main";
+}
+/*///////////////SIDEBAR//////////////*/
+aside {
+  min-width: 318px;
+  max-width: 318px;
+  height: 100vh;
+  background: #f1f1f1;
+  grid-area: side;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 99;
+}
+/*///////////////MAIN CONTENT//////////////*/
+main {
+  width: 100%;
+  height: 100vh;
+  background-color: #fcfcfc;
+  grid-area: main;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+/*///////////////CUSTOM SIDEBAR//////////////*/
+.SideIconContent {
+  width: 100%;
+  height: auto;
+}
+.icons {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.homeIcon,
+.contactIcon,
+.debugIcon,
+.remoteIcon,
+.columnIcon {
+  min-width: 40px;
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home svg,
+.contact svg,
+.debug svg,
+.remote svg,
+.column svg {
+  width: 20px;
+  height: 20px;
+  fill: #141414;
+}
+.mobilButton {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 10px;
+  bottom: 10px;
+  cursor: pointer;
+}
+.open {
+  transform: translateX(0);
+  transition: all 0.5s;
+}
+/*///////////////SIDEBAR LOGO//////////////*/
+.sideLogo a {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: #353535;
+  letter-spacing: 1.2px;
+}
+.SideTitle {
+  font-weight: 300;
+  font-size: 20px;
+  margin-left: 10px;
+}
+.svgLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sideLogo:hover {
+  background: #dbdbdb;
+}
+/*///////////////FLEX ICON + CONTENT//////////////*/
+.home,
+.contact,
+.debug,
+.remote,
+.column {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  text-decoration: none;
+  color: #141414;
+}
+.homeM,
+.contactM,
+.debugM,
+.remoteM,
+.columnM {
+  display: flex;
+}
+
+.proyectT,
+.homeT,
+.debugT,
+.remoteT,
+.contactT {
+  font-size: 14px;
+  margin-left: 10px;
+}
+.home:hover,
+.contact:hover,
+.debug:hover,
+.remote:hover,
+.column:hover {
+  background-color: #dbdbdb;
+}
+.copyright {
+  font-size: 14px;
+  color: #929292;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.copyIcon {
+  display: none;
+}
+/*///////////////WINDOWS ATRIBUTE//////////////*/
+.attributetowindows {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  color: #929292;
+  font-size: 14px;
+  z-index: 99;
+  text-align: center;
+}
+.attributetowindows img {
+  width: 25px;
+  margin-right: 5px;
+}
+/*///////////////MAIN CONTENT//////////////*/
+.mainTitle {
+  width: 400px;
+}
+.mainTitle h3{
+  font-size: 20px;
+}
+.mainTitle p {
+  font-size: 16px;
+  color: #929292;
+  font-weight: 100;
+}
+.mainContent {
+  background-color: #fcfcfc;
+  width: 98%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.item_1 {
+  width: 230px;
+  height: 180px;
+  background-color: #ffff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.itemIcon {
+  width: 90;
+  margin: auto;
+  height: 70px;
+
+}
+.itemTitle {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.itemBar1,
+.itemBar2,
+.itemBar3,
+.itemBar4,
+.itemBar5,
+.itemBar6 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 8px;
+  background-color: #6bff84;
+}
+.itemBar1 {
+  width: 100%;
+}
+.itemBar2 {
+  width: 100%;
+}
+.itemBar3 {
+  width: 48%;
+}
+.itemBar4 {
+  width: 60%;
+}
+.itemBar5{
+  width: 30%;
+}
+.itemBar6{
+  width: 20%;
+}
+.itemIcon img {
+  width: 80px;
+  object-fit: contain;
+}
+/*///////////////MEDIA QUERYS//////////////*/
+@media screen and (max-width: 1000px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+  aside {
+    min-width: 40px;
+    max-width: 40px;
+    transition: all 0.5s;
+    position: fixed;
+    min-height: 100%;
+  }
+  main {
+    margin-left: 60px;
+  }
+  .SideTitle {
+    display: none;
+  }
+  .proyectT,
+  .homeT,
+  .debugT,
+  .remoteT,
+  .contactT {
+    display: none;
+  }
+  .copyIcon {
+    display: block;
+  }
+  .copyIcon svg {
+    fill: black;
+  }
+  .copyright {
+    bottom: 10px;
+  }
+  .copyright p {
+    display: none;
+  }
+}
+
+@media screen and (max-width:678px) {
+  .mainContent {
+    width: 100%;
+    flex-direction: column;
+  }
+  .item_1 {
+    width: 100%;
+    height: 180px;
+    background-color: #ffff;
+  }
+}
+@media screen and (max-width: 500px) {
+  main {
+    margin-left: 0;
+  }
+  aside {
+    min-width: 100%;
+    position: fixed;
+    transform: translateX(-3000px);
+    overflow: hidden;
+  }
+  .copyright {
+    display: none;
+  }
+  .mobilButton {
+    display: block;
+  }
+  .proyectT,
+  .homeT,
+  .debugT,
+  .remoteT,
+  .contactT {
+    display: block;
+  }
+  .SideTitle {
+    display: block;
+  }
+  .homeM,
+  .contactM,
+  .debugM,
+  .remoteM,
+  .columnM {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  .proyectT,
+  .homeT,
+  .debugT,
+  .remoteT,
+  .contactT {
+    margin: 0;
+  }
+  .attributetowindows {
+    display: none;
+  }
+  .mainTitle {
+    width: 100%;
+  }
+}
