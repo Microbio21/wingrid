@@ -15,7 +15,8 @@
 aside {
   min-width: 318px;
   max-width: 318px;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   background: #f1f1f1;
   grid-area: side;
   position: relative;
@@ -223,12 +224,16 @@ main {
 .itemBar3,
 .itemBar4,
 .itemBar5,
-.itemBar6 {
+.itemBar6,
+.itemBar7,
+.itemBar8 {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 8px;
-  background-color: #6bff84;
+  height: 10px;
+  background-color:#6bff84;
+  text-align: center;
+  font-size: 10px;
 }
 .itemBar1 {
   width: 100%;
@@ -248,9 +253,27 @@ main {
 .itemBar6{
   width: 20%;
 }
+.itemBar7{
+  width: 60%;
+}
+.itemBar8 {
+  width: 5%;
+}
 .itemIcon img {
   width: 80px;
   object-fit: contain;
+}
+.item_1,
+.item_1,
+.item_1r,
+.item_1,
+.item_1,
+.item_1,
+.item_1,
+.item_1 {
+  box-shadow: 0px 0px 5px #f8f8f8;
+  border-radius: 10px;
+  overflow: hidden;
 }
 /*///////////////MEDIA QUERYS//////////////*/
 @media screen and (max-width: 1000px) {
@@ -349,6 +372,7 @@ main {
     display: none;
   }
   .mainTitle {
-    width: 100%;
+    width: 98%;
+    margin: auto;
   }
 }
